@@ -5,9 +5,12 @@ export async function run(): Promise<void> {
   try {
     let token = core.getInput('token')
 
+    console.log('token', token)
+
     if (core.getInput('registry') === 'ghcr.io') {
       token = Buffer.from(token).toString('base64')
     }
+    console.log('token', token)
 
     const image = {
       registry: {
