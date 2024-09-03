@@ -1,4 +1,4 @@
-# Docker Registry Tag
+# Docker Registry Tag 
 
 A GitHub Action for adding many tags to an existing image in a Docker Registry
 _without_ changing the digest, using Docker Registry API V2.
