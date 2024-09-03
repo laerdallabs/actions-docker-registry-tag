@@ -130,6 +130,15 @@ function addTags(image, tags) {
             authorization: `Bearer ${image.registry.token}`,
             accept: manifestTypes.map(type => `application/vnd.${type}+json`).join(',')
         };
+        console.log('headers');
+        console.log(headers);
+        console.log('headers');
+
+        const manUrl = manifestUrl(image, image.target.tag);
+        console.log('manUrl');
+        console.log(manUrl);
+        console.log('manUrl');
+
         const manifest = yield node_fetch_1.default(manifestUrl(image, image.target.tag), {
             method: 'GET',
             headers
