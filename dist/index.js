@@ -143,6 +143,13 @@ function addTags(image, tags) {
             method: 'GET',
             headers
         });
+        console.log('manifest');
+        console.log(manifest);
+        console.log('manifest');
+
+
+
+
         if (manifest.status !== 200) {
             core.debug(yield manifest.json());
             throw new Error(`${image.target.repository}:${image.target.tag} not found.`);
