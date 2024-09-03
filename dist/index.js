@@ -143,9 +143,6 @@ function addTags(image, tags) {
             method: 'GET',
             headers
         });
-        console.log('manifest');
-        console.log(manifest);
-        console.log('manifest');
 
 
 
@@ -156,6 +153,9 @@ function addTags(image, tags) {
         }
         const mediaType = manifest.headers.get('Content-Type');
         const targetManifest = yield manifest.text();
+        console.log('targetManifest');
+        console.log(targetManifest);
+        console.log('targetManifest');
         Object.assign(headers, {
             'Content-Type': mediaType
         });
